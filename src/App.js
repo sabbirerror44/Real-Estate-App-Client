@@ -1,6 +1,7 @@
 import { createContext, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import AddFlat from './Components/AddFlat/AddFlat';
 import Admin from './Components/Admin/Admin';
 import Career from './Components/Career/Career';
 import Contact from './Components/Contact/Contact';
@@ -39,12 +40,15 @@ function App() {
         <Route path = '/login'>
             <Login></Login>
         </Route>
+        <PrivateRoute path = '/addflat'>
+            <AddFlat></AddFlat>
+        </PrivateRoute>
         <Route path = '/admin'>
             <Admin></Admin>
         </Route>
-        <PrivateRoute path = '/contact'>
+        <Route path = '/contact'>
             <Contact></Contact>
-        </PrivateRoute>
+        </Route>
         <Route path = '/career'>
             <Career></Career>
         </Route>

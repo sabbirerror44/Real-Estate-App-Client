@@ -48,16 +48,6 @@ const Home = () => {
                 )
              }
         </Row>
-
-
-
-            {/* {
-                flats.map(flat => (<>
-                    <h3>Flat Name: {flat.flat}</h3>
-                    <p>Description: {flat.description}</p>
-                    <img src={`http://localhost:5000/${flat.avatar}`} alt="Flat Pic" />
-                </>))
-            } */}
             <Footer></Footer>
             
         </div>
