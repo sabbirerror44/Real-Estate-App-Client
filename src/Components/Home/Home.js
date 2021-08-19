@@ -38,7 +38,7 @@ const Home = () => {
                             <Card.Text>Taka {flat.price}</Card.Text>
                        </Card.Body>
                        <Card.Footer>
-                             <Card.Text>Developer: {flat.developer}</Card.Text>
+                             <Card.Text>Owner: {flat.owner}</Card.Text>
                        </Card.Footer>
                    </Card>
              

@@ -25,7 +25,9 @@ const SingleFlat = () => {
                 <p>{singleFlat.location} {singleFlat.district}</p>
                 <p>{singleFlat.description}</p>
                 <p>{singleFlat.developer} Design and Development Company</p>
-                <Link to='/contact'><button type="button" class="btn btn-secondary btn-lg">contact Us</button></Link>
+                <Link to={`/contact/${singleFlat._id}`}>
+                    <button type="button" class="btn btn-secondary btn-lg">contact With Owner</button>
+                </Link>
            </div>
           <div className="col-5">
             <h2>Bochure</h2>

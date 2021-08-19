@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../App';
 import './AddFlat.css';
+import InterestedClients from './InterestedClients/InterestedClients';
 const AddFlat = () => {
+   const [loggedInUser, setloggedInUser] = useContext(UserContext);
+
     return (
         <div>
             <div className="flat-info-form">
@@ -54,12 +58,14 @@ const AddFlat = () => {
                         </div><br/>
                        
                         <div className="form-group">
-                           <input id="developer" type="text" name="developer" className="form-control item" placeholder="Enter Developer's Information" required />
+                           <input id="owner" type="text" name="owner" value={loggedInUser.email} className="form-control item" placeholder="Enter Developer's Information" required />
                         </div> 
 
                         <input className="btn btn-dark" type="submit" value="Submit" />
                     </form>
-                </div>
+             </div>
+             <InterestedClients></InterestedClients>
+                  
         </div>
     );
 };

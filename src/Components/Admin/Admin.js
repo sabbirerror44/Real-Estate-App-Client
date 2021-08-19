@@ -1,5 +1,6 @@
 import React from 'react';
 import './Admin.css';
+import CVCollection from './CVCollection/CVCollection';
 import FlatApproval from './FlatApproval/FlatApproval';
 
 const Admin = () => {
@@ -7,6 +8,7 @@ const Admin = () => {
         <div>
            <h2>Admin Dashboard</h2>
            <FlatApproval></FlatApproval>
+           <CVCollection></CVCollection>
         </div>
     );
 };

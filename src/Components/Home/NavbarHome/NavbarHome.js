@@ -19,7 +19,7 @@ const NavbarHome = () => {
                               <Link to="/home" onClick={()=>setType('rent')} className="linkStyle">Rent</Link>
                               <Link to="/home" onClick={()=>setType('bachelor')} className="linkStyle">Bachelor</Link>
                     <Link to="/addflat" className="linkStyle">AddFlat</Link>
-                    <Link to="/contact" className="linkStyle">Contact</Link>
+                    <Link to="/contactauth" className="linkStyle">Contact</Link>
                     <Link to="/career" className="linkStyle">Career</Link>
                     </Nav>
                     <Nav>

@@ -5,6 +5,7 @@ import AddFlat from './Components/AddFlat/AddFlat';
 import Admin from './Components/Admin/Admin';
 import Career from './Components/Career/Career';
 import Contact from './Components/Contact/Contact';
+import ContactEx from './Components/ContactEx/ContactEx';
 import Home from './Components/Home/Home';
 import NavbarHome from './Components/Home/NavbarHome/NavbarHome';
 import Login from './Components/Login/Login';
@@ -46,9 +47,12 @@ function App() {
         <Route path = '/admin'>
             <Admin></Admin>
         </Route>
-        <Route path = '/contact'>
-            <Contact></Contact>
+        <Route path = '/contactauth'>
+            <ContactEx></ContactEx>
         </Route>
+        <PrivateRoute path = '/contact/:id'>
+            <Contact></Contact>
+        </PrivateRoute>
         <Route path = '/career'>
             <Career></Career>
         </Route>

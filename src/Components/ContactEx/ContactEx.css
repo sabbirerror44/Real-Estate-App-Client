@@ -1,0 +1,25 @@
+.contactEx-form {
+  padding: 30px 0;
+  background: aliceblue;
+}
+
+.contactEx-form form {
+  background-color: #fff;
+  max-width: 600px;
+  margin: auto;
+  padding: 50px 70px;
+  border-radius: 30px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.contactEx-form .item {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+}
+
+@media (max-width: 576px) {
+  .contactEx-form form {
+    padding: 50px 20px;
+  }
+}
