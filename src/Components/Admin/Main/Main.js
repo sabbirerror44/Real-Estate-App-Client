@@ -1,9 +1,18 @@
 import React from 'react';
-import './Main.css';
+import './Admin.css';
+
+
 const Main = () => {
     return (
         <div>
-            <h2>Main Component</h2>
+            <h2>Welcome to Admin Panel</h2>
+            <p>
+                lorem lorem lorem
+                ;lajksdf hqaspjklafh;lskhaF;ha lkha;ls
+            </p>
+            
+                
+            
         </div>
     );
 };

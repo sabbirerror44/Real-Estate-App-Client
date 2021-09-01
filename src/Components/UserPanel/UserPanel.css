@@ -3,7 +3,7 @@
   min-height: 600px;
   margin-top: 30px;
 }
-.cv {
+.client {
   margin-top: 30px;
   width: 20%;
   min-height: 100%;
@@ -15,7 +15,7 @@
     min-height: 600px;
     margin-top: 30px;
   }
-  .cv {
+  .client {
     margin: 5px 20px;
     width: 90%;
     min-height: 100%;

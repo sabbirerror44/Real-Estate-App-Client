@@ -1,10 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
-import { UserContext } from '../../App';
 import './Login.css';
 
 const Login = () => {
-        const [loggedInUser, setLoggedInUser] = useContext(UserContext);
         const history = useHistory();
         const location = useLocation();
         const { from } = location.state || { from: { pathname: '/' } };
@@ -39,8 +37,15 @@ const Login = () => {
                 .then((result) => {
                     if(result.message && result.user) {
                         alert(result.message);
-                        setLoggedInUser(result.user);
                         setError('');
+                        localStorage.setItem('token', result.access_token);
+                        localStorage.setItem('user', result.user.email);
+                        localStorage.setItem('id', result.user.id);
+                        localStorage.setItem('role', result.user.role);
+                        history.push(from)
+                        window.location.reload();
+
+                        // 
                     }
                     else if(result.message==='Login failed! Please try again.') {
                         alert(result.message);
@@ -53,9 +58,7 @@ const Login = () => {
                     }
                  })
         };
-        if(loggedInUser){
-            history.push(from)
-        }
+     
     return (
         <>
         <div className="login-form">

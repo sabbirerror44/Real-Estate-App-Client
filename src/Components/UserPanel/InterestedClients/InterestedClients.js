@@ -6,7 +6,7 @@ const InterestedClients = () => {
     const [loggedInUser, setloggedInUser] = useContext(UserContext);
 
     useEffect(()=>{
-       fetch(`http://localhost:5000/contact/${loggedInUser.email}`)
+       fetch(`http://localhost:5000/contact/${localStorage.getItem('user')}`)
            .then(res => res.json())
            .then(data => {
                setClient(data)
@@ -15,10 +15,14 @@ const InterestedClients = () => {
 
     return (
         <div>
-             <h2>Interested Clients</h2>
                 {
                  clients.result&&clients.result.map(client =><>
-                    <h2>{client.ClientEmail}</h2> 
+                    <div>
+                        <p>{client.flatId}</p>
+                       <h4>{client.ClientEmail}</h4>
+                       <h4>{client.ClientMobile}</h4>
+                       <p>{client.ClientMessage}</p>
+                    </div>
                     
                     </>)
                        

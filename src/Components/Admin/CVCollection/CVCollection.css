@@ -1,0 +1,12 @@
+.cvStyle {
+  border: 2px solid gainsboro;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+@media only screen and (max-width: 800px) {
+  .cvStyle {
+    border: 2px solid gainsboro;
+    border-radius: 10px;
+  }
+}

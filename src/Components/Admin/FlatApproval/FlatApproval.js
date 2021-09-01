@@ -38,10 +38,10 @@ const FlatApproval = () => {
     return (
         <div>
             {flats? <>{
-                 <Row className="m-4 p-4">
+                 <Row className="m-2 p-2">
         {
                  flats.map(flat=><>
-                   <Col className="py-2" xs={12} sm={6} md={4} lg={3} xl={3}>
+                   <Col className="py-2" xs={12} sm={6} md={6} lg={4} xl={4}>
             
                  <Card>
                     <Card.Img variant="top" src={`http://localhost:5000/uploads/flatAvatars/${flat.avatar}`} />

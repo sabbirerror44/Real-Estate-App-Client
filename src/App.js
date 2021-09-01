@@ -1,7 +1,6 @@
 import { createContext, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import AddFlat from './Components/AddFlat/AddFlat';
 import Admin from './Components/Admin/Admin';
 import Career from './Components/Career/Career';
 import Contact from './Components/Contact/Contact';
@@ -10,9 +9,11 @@ import Home from './Components/Home/Home';
 import NavbarHome from './Components/Home/NavbarHome/NavbarHome';
 import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
+import AdminProtectedRoute from './Components/PrivateRoute/AdminProtectedRoute';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Signup from './Components/Signup/Signup';
 import SingleFlat from './Components/SingleFlat/SingleFlat';
+import UserPanel from './Components/UserPanel/UserPanel';
 
 export const UserContext = createContext();
 export const TypeContext = createContext();
@@ -41,12 +42,12 @@ function App() {
         <Route path = '/login'>
             <Login></Login>
         </Route>
-        <PrivateRoute path = '/addflat'>
-            <AddFlat></AddFlat>
+        <PrivateRoute path = '/userpanel'>
+            <UserPanel></UserPanel>
         </PrivateRoute>
-        <Route path = '/admin'>
+        <AdminProtectedRoute path = '/admin'>
             <Admin></Admin>
-        </Route>
+        </AdminProtectedRoute>
         <Route path = '/contactauth'>
             <ContactEx></ContactEx>
         </Route>

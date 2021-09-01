@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import './CVCollection.css';
 const CVCollection = () => {
     const [cvs, setCv] = useState([])
     useEffect(()=>{
@@ -12,10 +12,14 @@ const CVCollection = () => {
 
     return (
         <div>
-            <h3>All CV</h3>
             {
                 cvs.result&&cvs.result.map(cv =><>
-                   <h2>{cv.email}</h2> 
+                  <div className="cvStyle">
+                    <h6>{cv.name}</h6>
+                     <p>{cv.email}</p>
+                     <p>{cv.mobile}</p>
+                     
+                  </div>
                    
                    </>)
 

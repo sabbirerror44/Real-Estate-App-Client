@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { TypeContext, UserContext } from '../../../App';
+import { TypeContext } from '../../../App';
 import './NavbarHome.css';
 
 const NavbarHome = () => {
     const [type, setType] = useContext(TypeContext)
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" variant="light" className="style-nav">
@@ -18,13 +17,13 @@ const NavbarHome = () => {
                               <Link to="/home" onClick={()=>setType('buy')} className="linkStyle">Buy</Link>
                               <Link to="/home" onClick={()=>setType('rent')} className="linkStyle">Rent</Link>
                               <Link to="/home" onClick={()=>setType('bachelor')} className="linkStyle">Bachelor</Link>
-                    <Link to="/addflat" className="linkStyle">AddFlat</Link>
+                    <Link to="/userpanel" className="linkStyle">User-Panel</Link>
                     <Link to="/contactauth" className="linkStyle">Contact</Link>
                     <Link to="/career" className="linkStyle">Career</Link>
                     </Nav>
                     <Nav>
-                    {loggedInUser.email?<div className="linkStyle">{loggedInUser.email}</div>:<Link to="/login"className="linkStyle">Login</Link>}
-                    {loggedInUser.email?'':<Link to="/signup" className="linkStyle">SignUp</Link>}
+                    {localStorage.getItem('user')?<div className="linkStyle">{localStorage.getItem('user')}</div>:<Link to="/login"className="linkStyle">Login</Link>}
+                    {localStorage.getItem('user')?<Link to="/" className="linkStyle" onClick={()=>{localStorage.clear(); window.location.reload()}}>Logout</Link>:<Link to="/signup" className="linkStyle">SignUp</Link>}
                     <Link to="/admin" className="linkStyle">Admin</Link>
                    
                     </Nav>
