@@ -61,7 +61,7 @@ const handleChange = (e) => {
     return (
         <>
             <div className="row background">
-                <div className="col-7">
+                <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
                 <div className="registration-form">
            <p className="Style">Create Your Profile</p>
                     <form onSubmit={handleSubmit}
@@ -109,7 +109,7 @@ const handleChange = (e) => {
                 </div>
 
                 </div>
-                <div className="col-5 pictureSignup">
+                <div className="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 pictureSignup">
 
                 </div>
             </div>

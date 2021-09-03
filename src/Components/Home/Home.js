@@ -34,6 +34,7 @@ const Home = () => {
                             <div>
                                 <FontAwesomeIcon icon={faBed}/><span>{flat.bed} beds</span> <FontAwesomeIcon icon={faBath}/> <span>{flat.bath} baths</span> <FontAwesomeIcon icon={faChartArea}/> <span>2000sqft</span><br/>
                                 <p className="textDecoration">{flat.location}</p>
+                                <p className="textDecoration">Contract: {flat.contract}</p>
                             </div>
                             <Card.Text className="textDecoration">Taka {flat.price}</Card.Text>
                        </Card.Body>
