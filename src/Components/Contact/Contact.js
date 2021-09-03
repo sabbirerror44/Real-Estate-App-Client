@@ -1,11 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { UserContext } from '../../App';
 import Footer from '../Footer/Footer';
 import './Contact.css';
 
 const Contact = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [flat, setFlat] = useState(''); 
     const {id} = useParams();
     useEffect(()=>{
@@ -46,7 +44,7 @@ const Contact = () => {
                         <input type="email"
                           className="form-control item"
                           placeholder="Enter Your Email"
-                          value={loggedInUser.email}
+                          value={localStorage.getItem('user')}
                           name="ClientEmail" required  />
                         </div>
 

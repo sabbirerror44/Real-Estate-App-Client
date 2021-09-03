@@ -59,9 +59,9 @@ function App() {
         <Route path = '/contactauth'>
             <ContactEx></ContactEx>
         </Route>
-        <PrivateRoute path = '/contact/:id'>
+        <Route path = '/contact/:id'>
             <Contact></Contact>
-        </PrivateRoute>
+        </Route>
         <Route path = '/career'>
             <Career></Career>
         </Route>

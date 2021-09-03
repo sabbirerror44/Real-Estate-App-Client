@@ -59,11 +59,11 @@ const handleChange = (e) => {
              })
  }
     return (
-        <>
-            <div className="row background">
-                <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
+        <div className="background">
+            <div className="row">
+            <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
                 <div className="registration-form">
-           <p className="Style">Create Your Profile</p>
+                 <p className="Style">Create Your Profile</p>
                     <form onSubmit={handleSubmit}
                     >
                         <div className="form-group">
@@ -114,7 +114,7 @@ const handleChange = (e) => {
                 </div>
             </div>
            
-        </>
+        </div>
     );
 };
 
