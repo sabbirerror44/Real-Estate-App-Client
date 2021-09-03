@@ -57,14 +57,13 @@ const handleChange = (e) => {
                       setError(result.errors)
                     }
              })
-
-
-
  }
     return (
         <>
-           <div className="registration-form">
-           <h3 className="mb-3">Sign Up</h3>
+            <div className="row background">
+                <div className="col-7">
+                <div className="registration-form">
+           <p className="Style">Create Your Profile</p>
                     <form onSubmit={handleSubmit}
                     >
                         <div className="form-group">
@@ -74,7 +73,7 @@ const handleChange = (e) => {
                           onChange = {handleChange}
                           name="name" required  />
                         </div>
-                        {errors.name&&<p>{errors.name.msg}</p>}
+                        {errors.name&&<p className="error">{errors.name.msg}</p>}
 
                         <div className="form-group">
                         <input type="email"
@@ -83,7 +82,7 @@ const handleChange = (e) => {
                           onChange = {handleChange}
                           name="email" required  />
                         </div>
-                        {errors.email&&<p>{errors.email.msg}</p>}
+                        {errors.email&&<p className="error">{errors.email.msg}</p>}
               
                         <div className="form-group">
                         <input type="text" 
@@ -93,7 +92,7 @@ const handleChange = (e) => {
                             name="mobile"
                             required  />
                         </div>  
-                        {errors.mobile&&<p>{errors.mobile.msg}</p>} 
+                        {errors.mobile&&<p className="error">{errors.mobile.msg}</p>} 
 
                         <div className="form-group">
                              <input type="password"
@@ -102,21 +101,20 @@ const handleChange = (e) => {
                                onChange = {handleChange}
                                name="password" required  />
                         </div>
-                        {errors.password&&<p>{errors.password.msg}</p>}
-                                          
-                        {/* <div className="form-group item">
-                         <label htmlFor="role">Choose a Role</label><span> : </span>
-                            <select id="role" onChange = {handleChange} name="role">
-                                <option value="user">User</option>
-                                <option value="admin">Admin</option>
-                            </select>
-                        </div>  */}
+                        {errors.password&&<p className="error">{errors.password.msg}</p>}
                    
             
-                        <input className="btn btn-dark" type="submit" value="Submit" />
+                        <input className="sendButton" type="submit" value="Create Your Profile" />
                     </form>
                 </div>
-            </>
+
+                </div>
+                <div className="col-5 pictureSignup">
+
+                </div>
+            </div>
+           
+        </>
     );
 };
 

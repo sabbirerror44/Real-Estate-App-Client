@@ -7,3 +7,17 @@ img.bochure {
   height: 40%;
   width: 88%;
 }
+.details {
+  margin: 0.8rem;
+  color: black;
+  font-family: roboto;
+  font-size: 1.2vw;
+}
+@media (max-width: 800px) {
+  .details {
+    margin: 1rem;
+    color: black;
+    font-family: roboto;
+    font-size: 15px;
+  }
+}

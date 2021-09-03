@@ -1,6 +1,8 @@
+.background {
+  background: aliceblue;
+}
 .contact-form {
   padding: 30px 0;
-  background: aliceblue;
 }
 
 .contact-form form {
@@ -21,5 +23,34 @@
 @media (max-width: 576px) {
   .contact-form form {
     padding: 50px 20px;
+  }
+}
+
+.picStyle {
+  background-image: url("https://i.ibb.co/Yfy85kR/7c676259b8bea7cf1014f4d29a0031cd.gif");
+  background-size: 90% 80%;
+  border-radius: 80px;
+  min-height: 600px;
+  margin-top: 10px;
+}
+.Style {
+  font-family: roboto;
+  font-weight: 700;
+  font-size: 36px;
+  color: #264263;
+}
+.sendButton {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background: #0d3451 !important;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+@media only screen and (max-width: 600px) {
+  .picStyle {
+    margin: auto;
+    width: 80%;
   }
 }

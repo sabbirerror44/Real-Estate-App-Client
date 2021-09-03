@@ -1,23 +1,27 @@
-.flat {
-  width: 80%;
-  min-height: 600px;
-  margin-top: 30px;
+.backgroundAdmin {
+  background: #d5c7aa;
+  min-height: 700px;
 }
-.cv {
-  margin-top: 30px;
-  width: 20%;
-  min-height: 100%;
+.textAdmin {
+  margin: 2px auto 15px;
+  font-size: 3.5vw;
+  font-weight: 500;
+  font-family: roboto;
+  color: maroon;
+}
+.descriptionAdmin {
+  color: black;
+  font-size: 2rem;
+  font-weight: 450;
+  font-family: roboto;
 }
 
-@media only screen and (max-width: 800px) {
-  .flat {
-    width: 100%;
-    min-height: 600px;
-    margin-top: 30px;
-  }
-  .cv {
-    margin: 5px 20px;
-    width: 90%;
-    min-height: 100%;
+@media only screen and (max-width: 600px) {
+  .textAdmin {
+    margin: 2px auto 15px;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: roboto;
+    color: maroon;
   }
 }

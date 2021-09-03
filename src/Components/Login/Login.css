@@ -1,3 +1,7 @@
+.background {
+  background: aliceblue;
+  min-height: 600px;
+}
 .login-form {
   padding: 30px 0;
   background: aliceblue;
@@ -22,4 +26,36 @@
   .login-form form {
     padding: 50px 20px;
   }
+}
+
+/* .picStyleLogin {
+  background-image: url("https://i.ibb.co/w0ky3XS/Key-in-keyhole-on-door-silhouette-Real-Estate-pictogram-concept-template-for-sales-rental-advertisin.jpg");
+  background-size: 90% 80%;
+  background-repeat: no-repeat;
+  border-radius: 80px;
+  min-height: 500px;
+  margin-top: 10px;
+} */
+.Style {
+  font-family: roboto;
+  font-weight: 700;
+  font-size: 36px;
+  color: #264263;
+}
+.sendButton {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background: #0d3451 !important;
+  font-size: 1.2rem;
+  font-weight: 500;
+  /* box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075); */
+}
+.error {
+  color: red;
+  font-size: 1rem;
+}
+.notify {
+  color: blue;
+  font-size: 1rem;
 }

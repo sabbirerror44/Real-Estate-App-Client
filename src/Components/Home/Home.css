@@ -3,10 +3,28 @@ img.card-img-top {
   width: 100%;
 }
 
-.span {
+span {
   text-decoration: none !important;
+  margin: 2px;
+  padding: 3px;
+  color: darkred !important;
+  font-size: 18px;
+}
+.card-footer {
+  padding: 0.5rem 1rem;
+  background-color: #3b0000;
+  color: white;
+  font-size: 1.1rem;
+  font-family: roboto;
+}
+.title {
+  color: #261c2c;
+  font-size: 1.6rem;
+  font-family: roboto;
+}
+.textDecoration {
   margin: 5px;
-  padding: 5px;
-  color: darkred;
-  font-size: 16px;
+  color: black;
+  font-family: roboto;
+  font-size: 1.2rem;
 }

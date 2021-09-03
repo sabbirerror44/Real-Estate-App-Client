@@ -17,9 +17,11 @@ const Contact = () => {
         }, [id])
    
     return (
-        <div>
-           <div className="contact-form">
-           <h3 className="mb-3">Contact With The Owner</h3>
+        <div className='background'>
+                    <div className="row">
+                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                      <div className="contact-form">
+                      <p className="Style">Contact With Owner</p>
                     <form
                         action="http://localhost:5000/contact/owner"
                         method="post"
@@ -63,8 +65,14 @@ const Contact = () => {
                                name="ClientMessage" />
                         </div>
 
-                      <input className="btn btn-dark" type="submit" value="Submit" />
+                      <input className="sendButton" type="submit" value="Submit" />
+                    
                     </form>
+                      </div>
+
+                    </div>
+                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 picStyle">
+                    </div>
                 </div>
             <Footer></Footer>
         </div>

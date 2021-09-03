@@ -33,9 +33,9 @@ const Home = () => {
                             <Card.Title className="title">{flat.flat}</Card.Title>
                             <div>
                                 <FontAwesomeIcon icon={faBed}/><span>{flat.bed} beds</span> <FontAwesomeIcon icon={faBath}/> <span>{flat.bath} baths</span> <FontAwesomeIcon icon={faChartArea}/> <span>2000sqft</span><br/>
-                                <p>{flat.location}</p>
+                                <p className="textDecoration">{flat.location}</p>
                             </div>
-                            <Card.Text>Taka {flat.price}</Card.Text>
+                            <Card.Text className="textDecoration">Taka {flat.price}</Card.Text>
                        </Card.Body>
                        <Card.Footer>
                              <Card.Text>Owner: {flat.owner}</Card.Text>

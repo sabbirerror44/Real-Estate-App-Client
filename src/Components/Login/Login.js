@@ -60,10 +60,12 @@ const Login = () => {
         };
      
     return (
-        <>
-        <div className="login-form">
-        <h3 className="mb-3">Login</h3>
-                 <form onSubmit={handleSubmit}>
+         <>
+            <div className="background">
+                {/* <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12"> */}
+                <div className="login-form">
+                 <p className="Style">Login</p>
+                   <form onSubmit={handleSubmit}>
                      <div className="form-group">
                         <input
                             className="form-control item"
@@ -74,7 +76,7 @@ const Login = () => {
                             required
                         />       
                      </div>
-                     {error.username&&<p>{error.username.msg}</p>}
+                     {error.username&&<p className="error">{error.username.msg}</p>}
             
                        
                        <div className="form-group">
@@ -86,12 +88,14 @@ const Login = () => {
                                 placeholder="Enter you Password"
                                 required />
                         </div>
-                        {error.password&&<p>{error.password.msg}</p>}
-                        <p>Don't have an account? <Link to='/signup'>Sign up</Link></p>
+                        {error.password&&<p className="error">{error.password.msg}</p>}
+                        <p className="notify">Don't have an account? <Link to='/signup'>Sign up</Link></p>
          
-                     <input className="btn btn-dark" type="submit" value="Submit" />
+                     <input className="sendButton" type="submit" value="Submit" />
                  </form>
              </div>
+                </div>
+                {/* <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 picStyleLogin"></div> */}
          </>
     );
 };

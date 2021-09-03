@@ -2,6 +2,7 @@ import { createContext, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Admin from './Components/Admin/Admin';
+import FlatApproval from './Components/Admin/FlatApproval/FlatApproval';
 import Career from './Components/Career/Career';
 import Contact from './Components/Contact/Contact';
 import ContactEx from './Components/ContactEx/ContactEx';
@@ -13,6 +14,7 @@ import AdminProtectedRoute from './Components/PrivateRoute/AdminProtectedRoute';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Signup from './Components/Signup/Signup';
 import SingleFlat from './Components/SingleFlat/SingleFlat';
+import AddFlat from './Components/UserPanel/AddFlat/AddFlat';
 import UserPanel from './Components/UserPanel/UserPanel';
 
 export const UserContext = createContext();
@@ -45,8 +47,14 @@ function App() {
         <PrivateRoute path = '/userpanel'>
             <UserPanel></UserPanel>
         </PrivateRoute>
+        <PrivateRoute path = '/addflat'>
+            <AddFlat></AddFlat>
+        </PrivateRoute>
         <AdminProtectedRoute path = '/admin'>
             <Admin></Admin>
+        </AdminProtectedRoute>
+        <AdminProtectedRoute path = '/pendingflat'>
+            <FlatApproval></FlatApproval>
         </AdminProtectedRoute>
         <Route path = '/contactauth'>
             <ContactEx></ContactEx>

@@ -4,9 +4,11 @@ import './Career.css';
 
 const Career = () => {
     return (
-        <div>
-                  <div className="cv-form">
-                      <h3 className="mb-3">Drop your CV</h3>
+        <div className="background">
+                 <div className="row">
+                     <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                     <div className="cv-form">
+                      <p className="Style">Drop your CV</p>
                     <form
                         action="http://localhost:5000/cv"
                         method="post"
@@ -26,14 +28,17 @@ const Career = () => {
                         </div>
 
                         <div className="form-group">
-                        <label htmlFor="cv">Drop your CV</label>
+                        <label htmlFor="cv">PDF File cv</label>
                         <input id="cv" type="file" className="form-control item" name="cv" required/>
                         </div>
         
 
-                        <input className="btn btn-dark" type="submit" value="Submit" />
+                        <input className="sendButton" type="submit" value="Submit" />
                     </form>
-             </div>
+                    </div>
+                     </div>
+                     <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 picStyle"></div>
+                 </div>
             
             <Footer></Footer>
         </div>

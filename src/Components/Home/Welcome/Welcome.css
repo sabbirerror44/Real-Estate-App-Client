@@ -2,7 +2,7 @@
   background: url("https://i.ibb.co/KyCmfGg/Happy-Family-in-Front-of-Their-Home.jpg"),
     #c4c4c4;
   background-attachment: fixed;
-  background-size: 100% 70%;
+  background-size: 100% 73%;
   background-repeat: no-repeat;
   opacity: 0.9;
   min-height: 300px;
@@ -46,4 +46,19 @@ button.btnStyle {
 }
 button.btnStyle:hover {
   background: goldenrod;
+}
+@media only screen and (max-width: 600px) {
+  .textStyle {
+    margin: auto;
+    font-size: 6vw;
+    font-weight: 500;
+    font-family: cursive;
+    color: white;
+    background: #2c3e50;
+  }
+  .searchStyle {
+    height: 15%;
+    width: 95%;
+    margin: 10px;
+  }
 }
