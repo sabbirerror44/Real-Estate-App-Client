@@ -7,7 +7,7 @@ const UserPanel = () => {
     const [clients, setClient]= useState([]);
 
     useEffect(()=>{
-       fetch(`http://localhost:5000/contact/${localStorage.getItem('user')}`)
+       fetch(`https://floating-mountain-79047.herokuapp.com/contact/${localStorage.getItem('user')}`)
            .then(res => res.json())
            .then(data => {
                setClient(data)

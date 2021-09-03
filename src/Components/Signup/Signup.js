@@ -43,7 +43,7 @@ const handleChange = (e) => {
 }
  const handleSubmit = (e) => {
      e.preventDefault();
-     fetch('http://localhost:5000/users/signup', {
+     fetch('https://floating-mountain-79047.herokuapp.com/users/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(user),

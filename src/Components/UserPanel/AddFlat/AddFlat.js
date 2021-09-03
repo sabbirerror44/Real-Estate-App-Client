@@ -6,7 +6,7 @@ const AddFlat = () => {
         <div>
             <div className="flat-info-form">
                     <form
-                        action="http://localhost:5000/flat"
+                        action="https://floating-mountain-79047.herokuapp.com/flat"
                         method="post"
                         encType="multipart/form-data"
                     >

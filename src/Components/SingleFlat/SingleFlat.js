@@ -9,7 +9,7 @@ const SingleFlat = () => {
     const [singleFlat, setSingleFlat] = useState({});
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/flat/single/${id}`)
+        fetch(`https://floating-mountain-79047.herokuapp.com/flat/single/${id}`)
             .then(res => res.json())
             .then(data => {
                 setSingleFlat(data[0])
@@ -19,7 +19,7 @@ const SingleFlat = () => {
         <div className="row">
            <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12">
                <h2>{singleFlat.flat}</h2>
-               <img className='imageStyle' height="10%" width="50%" src={`http://localhost:5000/uploads/flatAvatars/${singleFlat.avatar}`} alt="" />
+               <img className='imageStyle' src={`https://floating-mountain-79047.herokuapp.com/uploads/flatAvatars/${singleFlat.avatar}`} alt="" />
                <br/>
                <FontAwesomeIcon icon={faBed}/><span>{singleFlat.bed} beds</span> <FontAwesomeIcon icon={faBath}/> <span>{singleFlat.bath} baths</span> <FontAwesomeIcon icon={faChartArea}/> <span>2000sqft</span><br/>
                 <p className="details">{singleFlat.location} {singleFlat.district}</p>

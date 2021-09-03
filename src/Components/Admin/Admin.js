@@ -8,7 +8,7 @@ const Admin = () => {
     const [show, setShow] = useState(false);
     const [cvs, setCv] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/cv`)
+        fetch(`https://floating-mountain-79047.herokuapp.com/cv`)
             .then(res => res.json())
             .then(data => {
                 setCv(data)

@@ -28,7 +28,7 @@ const Login = () => {
         
         const handleSubmit = (e) => {
             e.preventDefault();
-            fetch('http://localhost:5000/login', {
+            fetch('https://floating-mountain-79047.herokuapp.com/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(user),
@@ -62,7 +62,6 @@ const Login = () => {
     return (
          <>
             <div className="background">
-                {/* <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12"> */}
                 <div className="login-form">
                  <p className="Style">Login</p>
                    <form onSubmit={handleSubmit}>
@@ -94,8 +93,7 @@ const Login = () => {
                      <input className="sendButton" type="submit" value="Submit" />
                  </form>
              </div>
-                </div>
-                {/* <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 picStyleLogin"></div> */}
+         </div>
          </>
     );
 };

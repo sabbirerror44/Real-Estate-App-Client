@@ -12,7 +12,7 @@ const Home = () => {
     const [type, setType] = useContext(TypeContext)
     const [flats, setFlats] = useState([])
     useEffect(()=>{
-            fetch(`http://localhost:5000/flat/${type}`)
+            fetch(`https://floating-mountain-79047.herokuapp.com/flat/${type}`)
                 .then((res) => res.json())
                 .then((data) => {
                     setFlats(data);
@@ -28,7 +28,7 @@ const Home = () => {
                    <Col className="py-2" xs={12} sm={6} md={4} lg={3} xl={3}>
             
                  <Card>
-                   <Link to={`/flat/${flat._id}`}><Card.Img variant="top" src={`http://localhost:5000/uploads/flatAvatars/${flat.avatar}`} /></Link>
+                   <Link to={`/flat/${flat._id}`}><Card.Img variant="top" src={`https://floating-mountain-79047.herokuapp.com/uploads/flatAvatars/${flat.avatar}`} /></Link>
                        <Card.Body>
                             <Card.Title className="title">{flat.flat}</Card.Title>
                             <div>
@@ -37,7 +37,7 @@ const Home = () => {
                             </div>
                             <Card.Text className="textDecoration">Taka {flat.price}</Card.Text>
                        </Card.Body>
-                       <Card.Footer>
+                       <Card.Footer className="developer">
                              <Card.Text>Owner: {flat.owner}</Card.Text>
                        </Card.Footer>
                    </Card>

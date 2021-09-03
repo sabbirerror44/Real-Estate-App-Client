@@ -10,7 +10,7 @@ const Career = () => {
                      <div className="cv-form">
                       <p className="Style">Drop your CV</p>
                     <form
-                        action="http://localhost:5000/cv"
+                        action="https://floating-mountain-79047.herokuapp.com/cv"
                         method="post"
                         encType="multipart/form-data"
                     >

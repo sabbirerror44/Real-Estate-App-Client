@@ -9,7 +9,7 @@ const Contact = () => {
     const [flat, setFlat] = useState(''); 
     const {id} = useParams();
     useEffect(()=>{
-        fetch(`http://localhost:5000/flat/single/${id}`)
+        fetch(`https://floating-mountain-79047.herokuapp.com/flat/single/${id}`)
             .then(res => res.json())
             .then(data => {
                 setFlat(data[0])
@@ -23,7 +23,7 @@ const Contact = () => {
                       <div className="contact-form">
                       <p className="Style">Contact With Owner</p>
                     <form
-                        action="http://localhost:5000/contact/owner"
+                        action="https://floating-mountain-79047.herokuapp.com/contact/owner"
                         method="post"
                     >
                         <div className="form-group">

@@ -10,7 +10,7 @@ const ContactEx = () => {
              <div className="contactEx-form">
                   <p className="Style">Contact With Us</p>
                     <form 
-                        action="http://localhost:5000/contact/admin"
+                        action="https://floating-mountain-79047.herokuapp.com/contact/admin"
                         method="post"
                     >
                         <div className="form-group">
